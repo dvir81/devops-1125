@@ -8,14 +8,14 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu1-latest
+    runs-on: ubuntu-latest
     env:
       SSH_KEY: ${{ secrets.TOP_SECRET }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - uses: setup-python@v2
+      - uses: actions/setup-python@v2
         with:
           python-version: '3.9'
 
